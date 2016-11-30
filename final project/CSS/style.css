@@ -1,0 +1,154 @@
+*{margin: 0px;
+padding: 0px;}
+header {
+	margin:0px;
+	padding: 0px;
+	height:100px;
+width: 100%;
+	position: relative;
+	background: url(../IMG/2.jpeg)no-repeat;
+
+}
+header h1 {
+	float: right;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	padding-right: 400px;
+	padding-top: 10px;
+	color: white;
+
+}
+#comp {
+	border: 1px solid black;
+	float: right;
+	width: 850px;
+	height: 85px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	background: url(../IMG/9.jpg)no-repeat;
+
+}
+body {
+	background: #b3b3cc;
+}
+
+#nav {
+	text-align: center;
+	perspective:250px;
+	position: relative;
+	font-size: 20px;
+	font-family: normal;
+
+}
+#nav :hover .front{
+	transform: rotateY(180deg);
+	background: none;
+
+}
+#nav :hover .back{
+	transform: rotateY(0deg);
+	background-color: #33ccff;
+	
+}
+#nav img{
+	width: 620px;
+	height: 40px;
+}
+#nav ul li
+{
+	
+	width:220px;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	float:left;
+	position:relative;
+list-style: none;
+
+}
+#nav ul li a
+{ text-decoration:none;
+color:white;
+display:block;
+width: 220px;
+}
+#nav ul li a:hover
+{background-color:#6b6b47;
+}
+#nav ul ul
+{ position:absolute;
+display:none ;}
+#nav ul li:hover > ul 
+{display:block;
+}
+#nav ul ul li a{
+	color: #391326;
+	background: #33ccff;
+
+}
+footer{
+margin:0px auto;margin-top: 50px;
+text-align: center;
+color: white;  
+border: 5px solid white;
+height: 50px;
+width: 50px;
+position: relative;
+perspective: 150px;
+
+}
+footer img {
+	height: 50px;
+	width: 50px;
+}
+/*1*/
+footer:hover .front{
+	transform: rotateY(180deg);
+}
+footer:hover .back{
+	transform: rotateY(10deg);
+	background: #808080;
+}
+.faces{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:	#33ccff;
+	backface-visibility:hidden ;
+	transition:0.1s;
+}
+.back{
+	transform:rotateY(180deg);
+}
+/* section*/
+
+section {
+	margin: 150px;
+}
+section h2{
+	border: dashed 1px #801a00;
+	height: 25px;
+	text-align: center;
+	background: #801a00;
+	opacity: 0.8;
+}
+section h3{
+	border:dashed 1px ;
+	padding: 5px;
+	height: 25px;
+	background:  #ffe6f2;
+}
+.contblock {
+	padding-left: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.contblock ul ul  {
+	padding-left: 15px;
+}
+.contblock a {
+	text-decoration: none;
+	color: #4ce600;
+}

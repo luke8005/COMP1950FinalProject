@@ -1,0 +1,117 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body,html {
+	min-height: 100%;
+}
+body {
+	background:url(../IMG/1.jpg)
+	 no-repeat;
+	 width: 100%;
+	 height: 100%;
+
+background-size: cover; 
+
+}
+ul li {
+	list-style-type: none;
+	
+}
+ul li a {
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+ul li a:hover {
+	background-color: #ffcccc;
+}
+
+footer {
+	color: white;
+	float:center;
+	text-align: center;
+	padding: 55px;
+}
+#top {
+float: center;	
+margin-top: 10px;
+text-align: center;
+text-decoration: none ;
+color: white;  
+
+}
+.area1{
+margin:0px auto;margin-top: 150px;
+text-align: center;
+color: white;  
+border: 5px solid white;
+height: 80px;
+width: 60%;
+position: relative;
+perspective: 500px;
+}
+/*1*/
+.area1:hover .front{
+	transform: rotateY(180deg);
+}
+.area1:hover .back{
+	transform: rotateY(10deg);
+	background: #ff8080;
+	opacity: 0.7;
+}
+/*2*/
+.area2:hover .front{
+	transform: rotateY(180deg);
+}
+.area2:hover .back{
+	transform: rotateY(-10deg);
+	background:#ff8080;
+	opacity: 0.7;
+}
+/*3*/
+.area3:hover .front{
+	transform: rotateY(180deg);
+}
+.area3:hover .back{
+	transform: rotateY(10deg);
+	background: #ff8080;
+	opacity: 0.7;
+}
+/**/
+.faces{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	backface-visibility:hidden ;
+	transition:1s;
+	
+}
+.back{
+	transform:rotateY(180deg);
+}
+.area2{
+margin:0px auto;margin-top: 50px;
+text-align: center;
+text-decoration: underline ;
+color: white;  
+border: 5px solid white;
+height: 250px;
+width: 60%;
+position: relative;
+perspective: 500px;
+}
+
+.area3{
+margin:0px auto;margin-top: 50px;
+text-align: center;
+text-decoration: underline ;
+color: white;  
+border: 5px solid white;
+height: 80px;
+width: 60%;
+position: relative;
+perspective: 500px;
+}
