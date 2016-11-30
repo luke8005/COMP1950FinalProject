@@ -1,0 +1,111 @@
+/* Responsiveness for big screens */
+/*@media only screen (min-width:1024px){
+  body{
+   font-size:20px;
+   background-color:#F9F;
+   }
+ img{
+   max-width:100%;
+   height:auto;
+   }   */
+
+@media print{
+   	header, nav, footer, aside{
+   	  display:none;
+   		}
+
+   	body, main, section, article, p{
+   		float:none;  !important
+   		width:auto; !important
+   		margin:0px; !important
+   		padding:0px; !important
+   		background:none; !important
+   		}
+
+   	img{
+   		display:none;
+   		}
+
+   	section, article{
+   		page-break-before:always;
+   		}
+
+    h1{
+      page-break-after: avoid;
+    }
+
+    a:link:after,
+  	a:visited:after{
+  	   content: " (URL: " attr(href) ") ";
+  	   font-size: 90%;
+  	}
+
+   	}
+
+
+body{
+  font-family: verdana serif;
+
+}
+
+header{
+  width:100%;
+  margin: auto;
+  height: 350px;
+}
+
+main{
+  font-size: 18px;
+
+}
+aside {
+  margin-top: 175px;
+  background-color:red;
+}
+
+h1{
+  font-family: verdana sans-serif;
+  border-bottom: solid 1px red;
+
+}
+
+nav ul li{
+  font-size: 20px;
+  list-style-type: none;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 8px;
+  border-left: solid 1px lightgrey;
+}
+
+footer{
+  background-color: lightblue;
+  text-align:center;
+  color: black;
+}
+/* ID SELECTORS */
+#nav1{
+  position: absolute;
+  top: 40px;
+  right:100px;
+  font-size: 16px;
+  background-color:#C93;
+  text-align: right;
+  margin-bottom: 0px;
+}
+
+#nav2{
+  background-color:#999;
+  text-align: center;
+  margin-top: 0px;
+  position:fixed;
+}
+
+#h2_nav2{
+  margin: 0px;
+  padding-bottom: 0px;
+}
+
+
+
+/* CLASS SELECTORS */
