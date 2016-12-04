@@ -7,6 +7,7 @@
         <script src="jQuery/jquery.sticky.js"></script>
         <script src="jQuery/calendar.js"></script>
         <script src="jQuery/jquery.countdown.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <style>
             footer {
                 margin: 20px 0;
@@ -49,23 +50,33 @@
                                 <span class="nondropbtn"><a href=#>Contact</a></span>
                             </div>
                         </div>
+                    
                 </header>
                 <aside>
-                    <h2>Topics:</h2>
-                    <ul>
-                        <li><a href="#agenda">Agenda</a></li>
-                        <li><a href="#Referencing CSS">Referencing CSS</a></li>
-                        <li><a href="#Exercise #1: Apply An Alternate Stylesheet">Exercise #1: Apply An Alternate Stylesheet</a></li>
-                        <li><a href="#@import Method: Managing Multiple CSS Files">@import Method: Managing Multiple CSS Files</a></li>
-                        <li><a href="#Exercise #2: Using @import">Exercise #2: Using @import</a></li>
-                        <li><a href="#Simplifying your CSS">Simplifying your CSS</a></li>
-                        <li><a href="#CSS Selectors">CSS Selectors</a></li>
-                        <li><a href="#Exercise #3: Advanced Selectors">Exercise #3: Advanced Selectors</a></li>
-                        <li><a href="#CSS Measurements">CSS Measurements</a></li>
-                        <li><a href="#CSS Resources">CSS Resources</a></li>
-                        <li><a href="#Summary">Summary</a></li> 
-                        <li><a href="#Homework">Homework</a></li> 
-                    </ul>
+                    <div id="accordion">
+                      <h2>Topic</h2>
+                      <div>
+                         <ul>
+                            <li><a href="#agenda">Agenda</a></li>
+                            <li><a href="#Referencing CSS">Referencing CSS</a></li>
+                            <li><a href="#@import Method: Managing Multiple CSS Files">@import Method: Managing Multiple CSS Files</a></li>
+                            <li><a href="#Simplifying your CSS">Simplifying your CSS</a></li>
+                            <li><a href="#CSS Selectors">CSS Selectors</a></li>
+                            <li><a href="#CSS Measurements">CSS Measurements</a></li>
+                            <li><a href="#CSS Resources">CSS Resources</a></li>
+                            <li><a href="#Summary">Summary</a></li> 
+                        </ul>
+                      </div>
+                      <h2>Exercise</h2>
+                      <div>
+                        <ul>
+                            <li><a href="#Exercise #1: Apply An Alternate Stylesheet">Exercise #1: Apply An Alternate Stylesheet</a></li>
+                            <li><a href="#Exercise #2: Using @import">Exercise #2: Using @import</a></li>
+                            <li><a href="#Exercise #3: Advanced Selectors">Exercise #3: Advanced Selectors</a></li>
+                        </ul>
+                      </div>
+                      <h2>Homework</h2>
+                    </div>
                 </aside>
                 <div id="calendar"></div>
                 <div id="getting-started"></div>
@@ -75,9 +86,9 @@
             <h2 id="section_title1">Lecture Three: CSS techniques</h2>
             <article id="agenda">
                 <h2>Agenda</h2>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum enim eget ornare eleifend. Nunc at interdum metus. Quisque id tempor augue. Quisque imperdiet ut libero non mattis. Donec sollicitudin eget lorem in auctor. Ut varius tortor in sagittis ultricies. Vestibulum hendrerit at neque eu imperdiet. Duis hendrerit tortor non consectetur vulputate. Aenean id interdum nulla.</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp; Aenean porttitor dictum sem, id fermentum libero pharetra pulvinar. Maecenas et dolor vel arcu tincidunt auctor tincidunt quis erat. Nulla sed ante neque. Donec id augue a arcu pulvinar lobortis vitae sagittis eros. Donec elementum sit amet nisl rhoncus facilisis. Suspendisse lectus massa, malesuada tincidunt pulvinar quis, mattis bibendum augue. Nam sit amet sagittis est.</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp; Fusce sit amet luctus nibh. Quisque ut vehicula elit. Phasellus sed purus mattis lorem vestibulum viverra. Cras cursus metus bibendum est efficitur, ut lobortis nunc vulputate. Quisque libero dolor, ornare eu nunc nec, accumsan sollicitudin tortor. Donec euismod suscipit congue. Sed dictum erat et leo semper, ut varius dolor ultrices. Nunc a odio mattis metus suscipit dignissim porttitor vel justo.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum enim eget ornare eleifend. Nunc at interdum metus. Quisque id tempor augue. Quisque imperdiet ut libero non mattis. Donec sollicitudin eget lorem in auctor. Ut varius tortor in sagittis ultricies. Vestibulum hendrerit at neque eu imperdiet. Duis hendrerit tortor non consectetur vulputate. Aenean id interdum nulla.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp; Aenean porttitor dictum sem, id fermentum libero pharetra pulvinar. Maecenas et dolor vel arcu tincidunt auctor tincidunt quis erat. Nulla sed ante neque. Donec id augue a arcu pulvinar lobortis vitae sagittis eros. Donec elementum sit amet nisl rhoncus facilisis. Suspendisse lectus massa, malesuada tincidunt pulvinar quis, mattis bibendum augue. Nam sit amet sagittis est.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp; Fusce sit amet luctus nibh. Quisque ut vehicula elit. Phasellus sed purus mattis lorem vestibulum viverra. Cras cursus metus bibendum est efficitur, ut lobortis nunc vulputate. Quisque libero dolor, ornare eu nunc nec, accumsan sollicitudin tortor. Donec euismod suscipit congue. Sed dictum erat et leo semper, ut varius dolor ultrices. Nunc a odio mattis metus suscipit dignissim porttitor vel justo.</p>
             </article>
             <article id="Referencing CSS">
                 <h2>Referencing CSS</h2>
@@ -92,13 +103,18 @@
              <article id="@import Method: Managing Multiple CSS Files">
                 <h2>@import Method: Managing Multiple CSS Files</h2>
              </article>
+             
         </section>
         </main>
         <footer>
            
         </footer>
-
-        <script>        
+        <script>
+            $( function() {
+                $( "#accordion" ).accordion({
+                    heightStyle: "content"
+                });
+              } );
             $(document).ready(function() {
                 $('#sticker').sticky({topSpacing:0});
             });

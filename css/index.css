@@ -190,7 +190,7 @@ footer, header, hgroup, menu, nav, section {
         border: none;
         cursor: pointer;
         min-width: 50px;
-        font-size: 2em;
+        font-size: 1.7vw;
         background-color: transparent;
         
     }
