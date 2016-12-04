@@ -3,11 +3,11 @@
     <head>
         <link rel="stylesheet" href="css/index.css" />        
         <link rel="stylesheet" href="css/calendar.css"/>
+        <link rel="stylesheet" href="css/search.css?v=2">
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
         <script src="jQuery/jquery.sticky.js"></script>
         <script src="jQuery/calendar.js"></script>
         <script src="jQuery/jquery.countdown.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <style>
             footer {
                 margin: 20px 0;
@@ -48,11 +48,20 @@
                             </div>
                              <div class="nondrop">
                                 <span class="nondropbtn"><a href=#>Contact</a></span>
-                            </div>
-                        </div>
-                    
+                            </div>                 
+                        </div>        
                 </header>
                 <aside>
+                    <div class="flexsearch">
+                                    <div class="flexsearch--wrapper">
+                                        <form class="flexsearch--form" action="#" method="post">
+                                            <div class="flexsearch--input-wrapper">
+                                                <input class="flexsearch--input" type="search" placeholder="search">
+                                            </div>
+                                            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+                                        </form>
+                                    </div>
+                            </div>
                     <div id="accordion">
                       <h2>Topic</h2>
                       <div>
