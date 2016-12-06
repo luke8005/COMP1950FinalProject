@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/index.css" />        
+        <link rel="stylesheet" href="css/index.css" />
         <link rel="stylesheet" href="css/calendar.css"/>
         <link rel="stylesheet" href="css/search.css?v=2">
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -21,16 +21,17 @@
                         rgba(54,144,240,1) 50%,
                         rgba(30,105,222,1) 100%
                         );
-                
+
             }
         </style>
     </head>
-    <body> 
+    <body>
         <div id="sticker">
                 <header>
                          <div class="nav">
-                             <span><img src="img/bcit-logo.png" style="height:75px"></span>
+                             <span><img src="img/bcit-logo.png" style="height:100px"></span>
                              <span>COMP 1950</span>
+                             <div class="drop-wrapper">
                               <div class="drop">
                                 <button class="dropbtn">Contents</button>
                                 <div class="dropdown-content">
@@ -49,8 +50,9 @@
                             </div>
                              <div class="nondrop">
                                 <span class="nondropbtn"><a href=#>Contact</a></span>
-                            </div>                 
-                        </div>        
+                            </div>
+                        </div>
+                      </div>
                 </header>
                 <aside>
                     <div class="flexsearch">
@@ -74,7 +76,7 @@
                             <li><a href="#CSS Selectors">CSS Selectors</a></li>
                             <li><a href="#CSS Measurements">CSS Measurements</a></li>
                             <li><a href="#CSS Resources">CSS Resources</a></li>
-                            <li><a href="#Summary">Summary</a></li> 
+                            <li><a href="#Summary">Summary</a></li>
                         </ul>
                       </div>
                       <h2>Exercise</h2>
@@ -113,11 +115,11 @@
              <article id="@import Method: Managing Multiple CSS Files">
                 <h2>@import Method: Managing Multiple CSS Files</h2>
              </article>
-             
+
         </section>
         </main>
         <footer>
-           
+
         </footer>
         <script>
             $( function() {
@@ -174,12 +176,12 @@
         for(var x = 0; x < data.length; x++){
            if(dayDiff > (Math.abs(new Date(data[x].date) - today))){
                nextQuizDate = data[x].date;
-           } 
+           }
         }
-            
+
         $("#getting-started")
           .countdown(nextQuizDate, function(event) {
-            $(this).text("Next quiz begins in " + 
+            $(this).text("Next quiz begins in " +
               event.strftime('%D days %H:%M:%S')
             );
           });
