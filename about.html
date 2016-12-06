@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/index.css" />        
+        <link rel="stylesheet" href="css/index.css" />
         <link rel="stylesheet" href="css/calendar.css"/>
         <link rel="stylesheet" href="css/search.css?v=2">
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -13,7 +13,7 @@
             footer {
                 margin: 20px 0;
             }
-            .nav{
+            header{
                background: linear-gradient(
                         135deg,
                         rgba(109,179,242,1) 0,
@@ -21,36 +21,38 @@
                         rgba(54,144,240,1) 50%,
                         rgba(30,105,222,1) 100%
                         );
-                
+
             }
         </style>
     </head>
     <body> 
-        <div id="sticker">
+         <div id="sticker">
                 <header>
+                        <span><img src="img/bcit-logo.png" style="height:100px; width: 300px;"></span>
+                        <span style="margin-left: 50px;">COMP 1950</span>
                          <div class="nav">
-                             <span><img src="img/bcit-logo.png" style="height:75px"></span>
-                             <span>COMP 1950</span>
-                              <div class="drop">
-                                <button class="dropbtn">Contents</button>
-                                <div class="dropdown-content">
-                                    <a href="#">Home</a>
-                                    <a href="#">About</a>
-                                    <a href="#">Resource</a>
+                             <div class="drop-wrapper">
+                                  <div class="drop">
+                                    <button class="dropbtn">Contents</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Home</a>
+                                        <a href="#">About</a>
+                                        <a href="#">Resource</a>
+                                    </div>
+                                </div>
+                                <div class="drop">
+                                    <button class="dropbtn">Lectures</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">1. Tools & Standards</a>
+                                        <a href="#">2. HTML5</a>
+                                        <a href="#">3. CSS</a>
+                                    </div>
+                                </div>
+                                 <div class="nondrop">
+                                    <span class="nondropbtn"><a href=#>Contact</a></span>
                                 </div>
                             </div>
-                            <div class="drop">
-                                <button class="dropbtn">Lectures</button>
-                                <div class="dropdown-content">
-                                    <a href="#">1. Tools & Standards</a>
-                                    <a href="#">2. HTML5</a>
-                                    <a href="index.html">3. CSS</a>
-                                </div>
-                            </div>
-                             <div class="nondrop">
-                                <span class="nondropbtn"><a href=#>Contact</a></span>
-                            </div>                 
-                        </div>        
+                      </div>
                 </header>
                 <aside>
                     <div class="flexsearch">
@@ -67,14 +69,11 @@
                       <h2>Topic</h2>
                       <div>
                          <ul>
-                            <li><a href="#agenda">Place & Time</a></li>
-                            <li><a href="#Referencing CSS">Format</a></li>
-                            <li><a href="#@import Method: Managing Multiple CSS Files">Evaluation</a></li>
-                            <li><a href="#Simplifying your CSS">Requirements</a></li>
-                            <li><a href="#CSS Selectors">Course curriculum overview</a></li>
-                            <li><a href="#CSS Measurements">Texts</a></li>
-                            <li><a href="#CSS Resources">Course policies</a></li>
-                            <li><a href="#Summary">Administrivia</a></li> 
+                            <li><a href="#Place & Time">Place & Time</a></li>
+                            <li><a href="#Format">Format</a></li>
+                            <li><a href="#Evaluation">Evaluation</a></li>
+                            <li><a href="#Requirements">Requirements</a></li>
+                            <li><a href="#Course curriculum overview">Course Curriculum Overview</a></li>
                         </ul>
                       </div>
                     </div>
@@ -84,25 +83,94 @@
         </div>
         <main>
          <section>
-            <h2 id="section_title1">Course Information</h2>
-            <article id="agenda">
+            <h2 style="margin-top: -40px;" id="section_title1">Course Information</h2>
+            <article id="Place & Time">
                 <h2>Place & Time</h2>
-                    <p>See BCIT's COMP 1950 page for the current course room and any applicable holiday schedules.</p>
+                    <p> &nbsp;&nbsp;&nbsp;&nbsp;See BCIT's COMP 1950 page for the current course room and any applicable holiday schedules.</p>
             </article>
-            <article id="Referencing CSS">
+            <article id="Format">
                 <h2>Format</h2>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet faucibus libero, quis molestie eros sollicitudin in. Vivamus lobortis sodales aliquam. Ut faucibus sed neque quis ornare. Nullam dapibus mi et massa condimentum molestie ut ac nisi. Vivamus congue odio metus, a sagittis tellus tempor in. Sed eleifend tempor eros vitae vestibulum. In sed tristique nibh, sed blandit odio. Duis ac nisi nulla. Cras a neque eu magna tincidunt euismod ut eget mauris. Mauris pellentesque, sem commodo pretium porttitor, odio metus volutpat urna, a lobortis magna mi et velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse interdum tempor ex et lobortis. Etiam cursus nisi in magna venenatis blandit. Fusce eget quam a mauris commodo sollicitudin id luctus felis.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; Attendance is mandatory for all sessions of COMP 1950.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; Each COMP 1950 session runs for 3 hours, and will include the following:</p>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp; Morbi blandit purus a tincidunt fringilla. Etiam ultrices vitae lectus tempus interdum. Maecenas ut tristique massa, id ornare dui. Donec sed risus non sem posuere lobortis. Mauris ut facilisis purus. Vivamus eleifend dictum erat. Nullam sodales a nunc at semper. Etiam sit amet convallis erat. Vivamus rhoncus tortor et sapien bibendum, sed hendrerit dui sagittis. Quisque volutpat velit nec nibh fermentum, a vehicula dui eleifend.</p>
+                <ul id="table">
+                    <li style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;2.5hour</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Quiz</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Lecture</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Code walkthroughs</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; In class exercises</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; 15 minute break</li>
+                </ul>
+                <br><br>
+                <ul id="table">
+                    <li style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;0.5hour</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Homework</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Q & A</li>
+                </ul>
             </article>
-             <article id="Exercise #1: Apply An Alternate Stylesheet">
-                <h2>Exercise #1: Apply An Alternate Stylesheet</h2>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet faucibus libero, quis molestie eros sollicitudin in. Vivamus lobortis sodales aliquam. Ut faucibus sed neque quis ornare. Nullam dapibus mi et massa condimentum molestie ut ac nisi. Vivamus congue odio metus, a sagittis tellus tempor in. Sed eleifend tempor eros vitae vestibulum. In sed tristique nibh, sed blandit odio. Duis ac nisi nulla. Cras a neque eu magna tincidunt euismod ut eget mauris. Mauris pellentesque, sem commodo pretium porttitor, odio metus volutpat urna, a lobortis magna mi et velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse interdum tempor ex et lobortis. Etiam cursus nisi in magna venenatis blandit. Fusce eget quam a mauris commodo sollicitudin id luctus felis.</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp; Morbi blandit purus a tincidunt fringilla. Etiam ultrices vitae lectus tempus interdum. Maecenas ut tristique massa, id ornare dui. Donec sed risus non sem posuere lobortis. Mauris ut facilisis purus. Vivamus eleifend dictum erat. Nullam sodales a nunc at semper. Etiam sit amet convallis erat. Vivamus rhoncus tortor et sapien bibendum, sed hendrerit dui sagittis. Quisque volutpat velit nec nibh fermentum, a vehicula dui eleifend.</p>
+             <article id="Evaluation">
+                <h2>Evaluation</h2>
+                <table style="width:75%">
+                    <tr>
+                        <th>Description</th>
+                        <th>Due</th>
+                        <th>Worth</th>
+                    </tr> 
+                    <tr>
+                        <td >Homework (9 in total)</td>
+                        <td>Daily</td>
+                        <td>35%</td>
+                    </tr>
+                     <tr>
+                        <td>Quizzes (8 in total)</td>
+                        <td>Various</td>
+                        <td>20%</td>
+                    </tr>
+                     <tr>
+                        <td>Group Project</td>
+                        <td>Session 12</td>
+                        <td>20%</td>
+                    </tr>
+                     <tr>
+                        <td>Final Exam</td>
+                        <td>Session 12</td>
+                        <td>25%</td>
+                    </tr>
+                </table>
             </article>
-             <article id="@import Method: Managing Multiple CSS Files">
-                <h2>@import Method: Managing Multiple CSS Files</h2>
+             <article id="Requirements">
+                <h2>Requirements</h2>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;Completion of COMP1850 or equivalent is required before beginning COMP1950.</p>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;Students taking COMP1950 must have solid foundational skills with both HTML and CSS, and some familiarity with Javascript.</p>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;Students are expected to understand the use of FTP and basic file management, be fluent with their operating system, and be proficient with a file compression utility (.zip).</p>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;If you have a problem with code you are working on and wish to email your instructor for assistance, be sure to provide the following:</p>
+                 <ul id="table">
+                     <li>&nbsp;&nbsp;&nbsp;&nbsp;a .zip or .rar compressed file as an attachment. include in it all related files and folders (HTML, CSS, and Javascript, images, etc)</li>
+                     <li>&nbsp;&nbsp;&nbsp;&nbsp;in the body of the email describe your question(s) as specifically as possible</li>
+                 </ul>
              </article>
-             
+              <article id="Course curriculum overview">
+                <h2>Course Curriculum Overview</h2>
+                  <ul id="table">
+                        <li style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;SESSION 01: Tools & Standards</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Development Environments</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Browser Tools</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Standards</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Semantics</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Site Structure</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Homework #1 Assigned</li>
+                 </ul>
+                  <br><br>
+                  <ul id="table">
+                        <li style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;SESSION 02: Markup Languages</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Quiz #1 - practical, open book</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;HTML</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;XHTML</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;HTML5: new tags, semantics, content models, deprecations, compatibility</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;CSS review</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;Homework #2 Assigned</li>
+                 </ul>
+             </article>
         </section>
         </main>
         <footer>

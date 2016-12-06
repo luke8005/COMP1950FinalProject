@@ -119,12 +119,12 @@ footer, header, hgroup, menu, nav, section {
         background-color: #f0f0f0;
     }
     article p{
-        font-size: 1.2vw;
+        font-size: 1.3vw;
         margin: 10px 0px;
     }
     footer{
         margin: 0px 25px;
-        font-size: 1.5em;
+        font-size: 1.3vw;
     }
     footer a{
         text-decoration: none;
@@ -150,7 +150,37 @@ footer, header, hgroup, menu, nav, section {
         position: relative;
         margin-left: 67.5%;
         margin-top:auto;
-        font: 1.2vw;
+        font: 1.3vw;
+    }
+    ul[id="table"] {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #2f3c71;
+        font-size: 1.3vw;
+    }
+    section article ul li:nth-child(2n+1){
+        background-color: #2f3c71;
+    }
+    article ul li:nth-child(2n+1){
+        color:white;
+    }
+    table{
+         margin-left: auto;
+        margin-right: auto;
+    }
+    table, th, td {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #2f3c71;
+        font-size: 1.3vw;
+        border-collapse: collapse;
+    }
+    th{
+        background-color: #2f3c71;
+        color:white;
+    }
+    td{
+        text-align: center;
     }
     /*
     *-aside
