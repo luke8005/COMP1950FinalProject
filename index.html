@@ -13,7 +13,7 @@
             footer {
                 margin: 20px 0;
             }
-            .nav{
+            header{
                background: linear-gradient(
                         135deg,
                         rgba(109,179,242,1) 0,
@@ -28,30 +28,30 @@
     <body>
         <div id="sticker">
                 <header>
+                        <span><img src="img/bcit-logo.png" style="height:100px; width: 300px;"></span>
+                        <span style="margin-left: 50px;">COMP 1950</span>
                          <div class="nav">
-                             <span><img src="img/bcit-logo.png" style="height:100px"></span>
-                             <span>COMP 1950</span>
                              <div class="drop-wrapper">
-                              <div class="drop">
-                                <button class="dropbtn">Contents</button>
-                                <div class="dropdown-content">
-                                    <a href="#">Home</a>
-                                    <a href="#">About</a>
-                                    <a href="#">Resource</a>
+                                  <div class="drop">
+                                    <button class="dropbtn">Contents</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Home</a>
+                                        <a href="#">About</a>
+                                        <a href="#">Resource</a>
+                                    </div>
+                                </div>
+                                <div class="drop">
+                                    <button class="dropbtn">Lectures</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">1. Tools & Standards</a>
+                                        <a href="#">2. HTML5</a>
+                                        <a href="#">3. CSS</a>
+                                    </div>
+                                </div>
+                                 <div class="nondrop">
+                                    <span class="nondropbtn"><a href=#>Contact</a></span>
                                 </div>
                             </div>
-                            <div class="drop">
-                                <button class="dropbtn">Lectures</button>
-                                <div class="dropdown-content">
-                                    <a href="#">1. Tools & Standards</a>
-                                    <a href="#">2. HTML5</a>
-                                    <a href="#">3. CSS</a>
-                                </div>
-                            </div>
-                             <div class="nondrop">
-                                <span class="nondropbtn"><a href=#>Contact</a></span>
-                            </div>
-                        </div>
                       </div>
                 </header>
                 <aside>
@@ -157,7 +157,7 @@
              var $ca = $('#calendar').calendar({
             // view: 'month',
             width: 450,
-            height: 200,
+            height: 150,
             // startWeek: 0,
             // selectedRang: [new Date(), null],
             data: data,
