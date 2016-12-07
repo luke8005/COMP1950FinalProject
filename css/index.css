@@ -139,21 +139,8 @@ footer, header, hgroup, menu, nav, section {
         width: 63%;
         color: #2f3c71;
     }
-    #calendar{
-        position: relative;
-        margin-left: 67.5%;
-        margin-top:auto;
-        width: 450px;
-        height: 400px;
-    }
-    #getting-started{
-        position: relative;
-        margin-left: 67.5%;
-        margin-top:auto;
-        font: 1.3vw;
-    }
     main{
-        margin-top: -400px;
+        margin-top: -525px;
         margin-left: 20px
     }
     ul[id="table"] {
@@ -169,7 +156,7 @@ footer, header, hgroup, menu, nav, section {
         color:white;
     }
     table{
-         margin-left: auto;
+        margin-left: auto;
         margin-right: auto;
     }
     table, th, td {
@@ -344,7 +331,6 @@ footer, header, hgroup, menu, nav, section {
      ***********************/
     .flexsearch {
       padding: 0 25px 0 200px; /* Padding for other horizontal elements */
-        margin-left:-200px;
     }
 
     .flexsearch--input {
@@ -352,14 +338,14 @@ footer, header, hgroup, menu, nav, section {
         -moz-box-sizing: content-box;
         box-sizing: content-box;
         height: 30px;
-        width: 385px;
+        width: auto;
         padding: 0 46px 0 10px;
         border-color: #888;
-      border-style: solid;
+        border-style: solid;
         border-width: 5px;
-      margin-top: 15px;
-      color: #333;
-      font-family: 'Helvetica', sans-serif;
+        margin-top: 15px;
+        color: #333;
+        font-family: 'Helvetica', sans-serif;
         font-size: 26px;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -367,7 +353,7 @@ footer, header, hgroup, menu, nav, section {
 
     .flexsearch--submit {
       position: absolute;
-        right: 0;
+        right: 120px;
         top: 0;
         display: block;
         width: 30px;

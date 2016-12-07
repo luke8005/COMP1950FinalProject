@@ -2,13 +2,11 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/calendar.css"/>
         <link rel="stylesheet" href="css/search.css?v=2">
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
         <script src="jQuery/jquery.sticky.js"></script>
-        <script src="jQuery/calendar.js"></script>
-        <script src="jQuery/jquery.countdown.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="jQuery/jquery.popupwindow.js"></script>
         <style>
             footer {
                 margin: 20px 0;
@@ -72,16 +70,6 @@
                         </div>
                 </header>
                 <aside>
-                    <div class="flexsearch">
-                                    <div class="flexsearch--wrapper">
-                                        <form class="flexsearch--form" action="#" method="post">
-                                            <div class="flexsearch--input-wrapper">
-                                                <input class="flexsearch--input" type="search" placeholder="search">
-                                            </div>
-                                            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
-                                        </form>
-                                    </div>
-                            </div>
                     <div id="accordion">
                       <h2>Topic</h2>
                       <div>
@@ -95,7 +83,10 @@
                       </div>
                     </div>
                 </aside>
-        <main>
+                <div id="other">
+                    <figure id="calendar_icon"><a href="calendar.html" class="popupwindow"><img src="img/Calendar-2.png" style="width: 100px; margin-left: 70%; margin-top: 10px;"></a></figure>
+                </div>
+        <main style="margin-top: -475px;">
          <section>
             <h2 style="margin-top: -40px;" id="section_title1">Course Information</h2>
             <article id="Place & Time">
@@ -174,7 +165,7 @@
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;Site Structure</li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;Homework #1 Assigned</li>
                  </ul>
-                  <br><br>
+                  <br>
                   <ul id="table">
                         <li style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;SESSION 02: Markup Languages</li>
                         <li>&nbsp;&nbsp;&nbsp;&nbsp;Quiz #1 - practical, open book</li>
@@ -199,6 +190,7 @@
              $(document).ready(function() {
                 $('header').sticky({topSpacing:0});
                 $('aside').sticky({topSpacing:200});
+                $('#other').sticky({topSpacing:600});
                 $('article').mouseover(function(){
                     $(this).children('h2').css("background-color", "#2f3c71");
                     $(this).children('h2').css("color", "white");
@@ -219,6 +211,22 @@
                      $(this).children('ul').css("margin", "0px");
                      $(this).children('table').css("margin-top", "0px");
                     $(this).children('table').css("margin-bottom", "0px");
+                });
+                var profiles =
+                {
+                    window800:
+                    {
+                        height:400,
+                        width:400,
+                        status:1
+                    },
+                };
+                function unloadcallback(){
+                    alert("unloaded");
+                };
+                $(function()
+                {
+                    $(".popupwindow").popupwindow(profiles);
                 });
             });
         </script>

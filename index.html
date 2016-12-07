@@ -6,9 +6,8 @@
         <link rel="stylesheet" href="css/search.css?v=2">
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
         <script src="jQuery/jquery.sticky.js"></script>
-        <script src="jQuery/calendar.js"></script>
-        <script src="jQuery/jquery.countdown.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="jQuery/jquery.popupwindow.js"></script>
         <style>
             footer {
                 margin: 20px 0;
@@ -26,7 +25,6 @@
         </style>
     </head>
     <body>
-        <div id="sticker">
                 <header>
                         <span><img src="img/bcit-logo.png" style="height:100px; width: 300px;"></span>
                         <span style="margin-left: 50px;">COMP 1950 Final Project</span>
@@ -72,17 +70,8 @@
                             </div>
                         </div>
                 </header>
+                            
                 <aside>
-                    <div class="flexsearch">
-                                    <div class="flexsearch--wrapper">
-                                        <form class="flexsearch--form" action="#" method="post">
-                                            <div class="flexsearch--input-wrapper">
-                                                <input class="flexsearch--input" type="search" placeholder="search">
-                                            </div>
-                                            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
-                                        </form>
-                                    </div>
-                            </div>
                     <div id="accordion">
                       <h2>Topic</h2>
                       <div>
@@ -108,7 +97,10 @@
                       <h2>Homework</h2>
                     </div>
                 </aside>
-        </div>
+                <div id="other">
+                    <figure id="calendar_icon"><a href="calendar.html" class="popupwindow"><img src="img/Calendar-2.png" style="width: 100px; margin-left: 70%; margin-top: 10px;"></a></figure>
+                </div>
+
         <main>
          <section>
             <h2 id="section_title1">Lecture Three: CSS techniques</h2>
@@ -131,22 +123,16 @@
              <article id="@import Method: Managing Multiple CSS Files">
                 <h2>@import Method: Managing Multiple CSS Files</h2>
              </article>
+            <footer>
+                <p>&#169; 2016. Luke, Duy, Manuel</p>
+            </footer>
         </section>
         </main>
-        <footer>
-            <p>&#169; 2016. Luke, Duy, Manuel<br>
-            <!--#config timefmt="Last modified: %B %e %Y %R %p" --> <!--#echo var="LAST_MODIFIED" -->
-            </p>
-        </footer>
         <script>
-            $( function() {
-                $( "#accordion" ).accordion({
-                    heightStyle: "content"
-                });
-              } );
             $(document).ready(function() {
                 $('header').sticky({topSpacing:0});
                 $('aside').sticky({topSpacing:200});
+                $('#other').sticky({topSpacing:600});
                 $('article').mouseover(function(){
                     $(this).children('h2').css("background-color", "#2f3c71");
                     $(this).children('h2').css("color", "white");
@@ -161,6 +147,25 @@
                     $(this).css("border", "none");
                     $(this).children('p').css("font-size", "1.3vw");
                     $(this).children('h2').css("font-size", "1.7vw");
+                });
+                $( "#accordion" ).accordion({
+                    heightStyle: "content"
+                });
+                var profiles =
+                {
+                    window800:
+                    {
+                        height:400,
+                        width:400,
+                        status:1
+                    },
+                };
+                function unloadcallback(){
+                    alert("unloaded");
+                };
+                $(function()
+                {
+                    $(".popupwindow").popupwindow(profiles);
                 });
             });
         </script>
