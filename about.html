@@ -26,7 +26,6 @@
         </style>
     </head>
     <body> 
-         <div id="sticker">
                 <header>
                         <span><img src="img/bcit-logo.png" style="height:100px; width: 300px;"></span>
                         <span style="margin-left: 50px;">COMP 1950 Final Project</span>
@@ -96,9 +95,6 @@
                       </div>
                     </div>
                 </aside>
-                <div id="calendar"></div>
-                <div id="getting-started"></div>
-        </div>
         <main>
          <section>
             <h2 style="margin-top: -40px;" id="section_title1">Course Information</h2>
@@ -200,64 +196,31 @@
                     heightStyle: "content"
                 });
               } );
-            $(document).ready(function() {
-                $('#sticker').sticky({topSpacing:0});
+             $(document).ready(function() {
+                $('header').sticky({topSpacing:0});
+                $('aside').sticky({topSpacing:200});
+                $('article').mouseover(function(){
+                    $(this).children('h2').css("background-color", "#2f3c71");
+                    $(this).children('h2').css("color", "white");
+                    $(this).children('h2').css("text-align", "center");
+                    $(this).css("border", "3px solid #2f3c71");
+                    $(this).children('p').css("font-size", "1.5vw");
+                    $(this).children('ul').css("margin", "20px");
+                    $(this).children('table').css("margin-top", "20px");
+                    $(this).children('table').css("margin-bottom", "20px");
+                });
+                $('article').mouseleave(function(){
+                    $(this).children('h2').css("background-color", "#f0f0f0");
+                    $(this).children('h2').css("color", "#2f3c71");
+                    $(this).children('h2').css("text-align", "left");
+                    $(this).css("border", "none");
+                    $(this).children('p').css("font-size", "1.3vw");
+                    $(this).children('h2').css("font-size", "1.7vw");
+                     $(this).children('ul').css("margin", "0px");
+                     $(this).children('table').css("margin-top", "0px");
+                    $(this).children('table').css("margin-bottom", "0px");
+                });
             });
-              var now = new Date();
-        var year = now.getFullYear();
-        var month = now.getMonth() + 1;
-        var date = now.getDate();
-
-
-        var data = [{
-            date: '2016/12/1',
-            value: 'Quiz 10'
-        },{
-            date: '2016/12/8',
-            value: 'Final Exam'
-        },{
-            date: '2016/11/24',
-            value: 'Quiz 9'
-        }, {
-            date: '2016/11/17',
-            value: 'Quiz 8'
-        }, {
-            date: '2016/11/10',
-            value: 'Quiz 7'
-        }];
-             var $ca = $('#calendar').calendar({
-            // view: 'month',
-            width: 450,
-            height: 200,
-            // startWeek: 0,
-            // selectedRang: [new Date(), null],
-            data: data,
-            date: new Date(),
-            onSelected: function(view, date, data) {
-                console.log('view:' + view)
-                console.log('date:' + date)
-                console.log('data:' + (data || '无'));
-            },
-            viewChange: function(view, y, m) {
-                console.log(view, y, m)
-
-            }
-        });
-        var nextQuizDate = data[0].date;
-        var today = new Date();
-        var dayDiff = Math.abs(new Date(data[0].date) - today);
-        for(var x = 0; x < data.length; x++){
-           if(dayDiff > (Math.abs(new Date(data[x].date) - today))){
-               nextQuizDate = data[x].date;
-           } 
-        }
-            
-        $("#getting-started")
-          .countdown(nextQuizDate, function(event) {
-            $(this).text("Next quiz begins in " + 
-              event.strftime('%D days %H:%M:%S')
-            );
-          });
         </script>
     </body>
 </html>

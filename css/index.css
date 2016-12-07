@@ -109,15 +109,15 @@ footer, header, hgroup, menu, nav, section {
         align-items: center;
         justify-content: center;
     }
-    main{
-        margin: -550px 20px;
+    article{
+        margin: 10px 0px;
     }
     article h2{
         font-size: 1.7vw;
         font-weight: bold;
-        margin: 10px 0px;
         background-color: #f0f0f0;
     }
+   
     article p{
         font-size: 1.3vw;
         margin: 10px 0px;
@@ -151,6 +151,10 @@ footer, header, hgroup, menu, nav, section {
         margin-left: 67.5%;
         margin-top:auto;
         font: 1.3vw;
+    }
+    main{
+        margin-top: -400px;
+        margin-left: 20px
     }
     ul[id="table"] {
         border-width: 3px;
@@ -189,7 +193,7 @@ footer, header, hgroup, menu, nav, section {
         overflow: scroll;
         position: relative;
         margin-left: 67.5%;
-        height: 300px;
+        height: 400px;
         font-size: 1vw;
     }
     aside h2{
