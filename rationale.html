@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/rationale.css" />
+        <link rel="stylesheet" href="css/search.css?v=2">
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="jQuery/jquery.sticky.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            footer {
+                margin: 20px 0;
+            }
+            header{
+               background: linear-gradient(
+                        135deg,
+                        rgba(109,179,242,1) 0,
+                        rgba(84,163,238,1) 50%,
+                        rgba(54,144,240,1) 50%,
+                        rgba(30,105,222,1) 100%
+                        );
+
+            }
+        </style>
+    </head>
+    <body> 
+                <header>
+                        <span><img src="img/bcit-logo.png" style="height:100px; width: 300px;"></span>
+                        <span style="margin-left: 50px;">COMP 1950 Final Project</span>
+                         <div class="nav">
+                             <div class="drop-wrapper">
+                                  <div class="drop">
+                                    <button class="dropbtn">Contents</button>
+                                    <div class="dropdown-content">
+                                        <a href="intro_home/final.html">Home</a>
+                                        <a href="about.html">About</a>
+                                        <a href="resource.html">Resource</a>
+                                    </div>
+                                </div>
+                                <div class="drop">
+                                    <button class="dropbtn">Lectures</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">1. Tools & Standards</a>
+                                        <a href="#">2. HTML5</a>
+                                        <a href="index.html">3. CSS</a>
+                                    </div>
+                                </div>
+                                 <div class="nondrop">
+                                    <span class="nondropbtn"><a href=#>Contact</a></span>
+                                </div>
+                                  <div class="drop">
+                                    <button class="dropbtn">Associated</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Students on bcitcomp.ca</a>
+                                        <a href="#">my.bcit</a>
+                                        <a href="#">bcit</a>
+                                        <a href="#">bcit:computing</a>
+                                    </div>
+                                </div>
+                                 <div class="nondrop" style="float:right;">
+                                    <span class="nondropbtn"><a href="rationale.html">Rationale</a></span>
+                                </div>
+                                 <div class="nondrop" style="float:right;">
+                                    <span class="nondropbtn"><a href="Site_map/index.html">Site Map</a></span>
+                                </div>
+                                <div class="nondrop" style="float:right;">
+                                    <span class="nondropbtn"><a href="intro_home/intro.html">Introduction</a></span>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+        <main>
+         <section>
+            <h2 style="margin-top: -40px;" id="section_title1">Rationale</h2>
+            <article id="Goal">
+                <h2>Goal</h2>
+                    <p> &nbsp;&nbsp;&nbsp;&nbsp;This project is to redesign the current COMP1950 pages to a new look. The new pages must meet more users’ requirements.</p>
+            </article>
+            <article id="Requirement">
+                <h2>Requirment</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; The target audience of COMP1950 are BCIT registered students for the course COMP1950. They should have fundamental knowledge on computing and internet browsing. From the target audience feedback, we have noticed a few concepts that this website needs to be improved.</p>
+                <ul id="table">
+                    <li style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;Audience Requirement</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Accessory</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; When the page is long especially in the lecture note pages, once scrolling down to the bottom of the page, the navigator bar disappears. In order to access to other page, users will need to scroll up and then click the page.</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Appearance</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; The font never changes regardless the size of the browser. It can cause some hard time for user to read.</li>
+                </ul>
+                <p>    &nbsp;&nbsp;&nbsp;&nbsp; Accessory and appearance are two issues that our team would like to address in this new design.</p>
+                <br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; According to the questionnaire, the owner of COMP1950 would like to see more features implemented.</p>
+                <ul id="table">
+                    <li style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;Owner Requirement</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Protection</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Since web pages are targeting COMP1950 course registered students, the owner would like to see protection on these pages. Only users with registered user name and correct password have the access to these pages.</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; Interaction</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; The owner does not want this website to be information display platform. The interactions between instructor and students or among students are important. These interactions include online exercise, online quiz and discussion board.</li>
+                </ul>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; Due to the length of development and lack of knowledge, protection features are not considered in this stage of development. For interaction concept, a simple quiz prototype may be included in this stage.</p>
+             </article>
+             <article id="Design">
+                <h2>Design</h2>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp; In our design, we gave the website a new look. Instead of using a combination of wine red, black and grey, we applied blue, navy and white in our colors selection. We chose to use these colors in order to match the BCIT logo.  The font size in content is assigned using view width. The size of letter changes according to the size of the browser.</p>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp; The navigator bar is relocated on the top of every page. It will stick on the top no matter while scrolling down. The side bar is replaced with a list of three categories, topic, exercise and homework. Each item on the link provides an easy access for user to jump into certain article. This feature will cut down the time that audience uses when they are looking for specific topic.</p>
+                 <p>&nbsp;&nbsp;&nbsp;&nbsp;Some additional features are added. These features are presented on the side bar as simple menu vector icon.</p>
+                 <ul id="table">
+                     <li>&nbsp;&nbsp;&nbsp;&nbsp;Calendar</li>
+                     <li>&nbsp;&nbsp;&nbsp;&nbsp;A small window included a calendar that marked all the important date and a message display the next coming event (e.g. quiz and final exam) will pop up.</li>
+                     <li>&nbsp;&nbsp;&nbsp;&nbsp;E-Mail</li>
+                     <li>&nbsp;&nbsp;&nbsp;&nbsp;The browser will ask for the access to e-Mail system installed in local machine for communicating with instructor using email.</li>
+                 </ul>
+             </article>
+        </section>
+        </main>
+        <footer>
+           
+        </footer>
+    </body>
+</html>
